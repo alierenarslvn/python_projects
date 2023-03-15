@@ -1,0 +1,17 @@
+import pyttsx3
+from PyPDF2 import PdfReader
+
+reader = PdfReader(r"C:\Users\Alier\test.pdf")
+
+page = reader.pages[0]
+text = page.extract_text()
+
+engine = pyttsx3.init()
+
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[0].id)
+
+
+engine.setProperty('rate', 150)
+engine.setProperty('volume',.75)
+engine.save_to_file(text, 'test.mp3')
