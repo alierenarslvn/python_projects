@@ -1,0 +1,1 @@
+# uzaydaki_insan_sayisi
