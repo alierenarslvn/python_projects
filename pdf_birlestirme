@@ -1,0 +1,11 @@
+from PyPDF2 import PdfMerger
+
+birlestirici = PdfMerger()
+
+ataturk = open('C:/Users/Alier/pdf_birlestirme/ataturk.pdf','rb')
+
+bayrak = open('C:/Users/Alier/pdf_birlestirme/bayrak.pdf', 'rb')
+
+birlestirici.append(ataturk)
+birlestirici.merge(0,bayrak)
+birlestirici.write('birlesen.pdf')
