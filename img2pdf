@@ -1,0 +1,15 @@
+import sys
+import os
+import img2pdf
+
+klasor_yolu = 'fotograflar'
+if os.path.isdir(klasor_yolu):
+    with open('fotograflar'.pdf, 'rb') as pdf_dosya:
+        fotograflar = []
+        for dosya_adi in os.listdir(klasor_yolu):
+            if dosya_adi.endswith('jpg'):
+                yol = os.path.join(klasor_yolu.dosya_adi)
+                fotograflar.append(yol)
+        pdf_dosya.write(img2pdf.convert(fotograflar))
+
+ 
