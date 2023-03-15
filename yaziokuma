@@ -1,0 +1,6 @@
+from gtts import gTTS
+import os
+
+konusma = gTTS(text = 'merhaba nasılsınız iyi misiniz', lang = 'tr', slow = False)
+konusma.save('deneme.mp3')
+os.system('deneme.mp3')
